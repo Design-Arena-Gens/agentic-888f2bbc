@@ -1,0 +1,20 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    optimizePackageImports: ["dayjs", "classnames"]
+  },
+  webpack: (config) => {
+    config.resolve = config.resolve || {};
+    config.resolve.fallback = {
+      ...(config.resolve.fallback || {}),
+      fs: false,
+      path: false,
+      crypto: false
+    };
+    return config;
+  }
+};
+
+export default nextConfig;
+

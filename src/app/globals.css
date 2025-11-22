@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html[dir="rtl"] {
+  --transform-dir: -1;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-100;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors;
+}
+.btn-primary {
+  @apply bg-primary-600 text-white hover:bg-primary-700;
+}
+.btn-outline {
+  @apply border border-gray-300 bg-white hover:bg-gray-50;
+}
